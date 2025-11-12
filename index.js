@@ -1,8 +1,8 @@
-let ex = require("express")
+import ex from "express";
 let app = ex()
-const cors = require("cors");
-let connection = require("../Backend/Connection/db")
-let router = require("../Backend/Router/Router")
+import cors from "cors";
+import connection from "../Backend/Connection/db.js";
+import router from "../Backend/Router/Router.js";
 
 connection()
 app.use(cors());

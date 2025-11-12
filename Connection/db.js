@@ -1,4 +1,4 @@
-let mg = require("mongoose")
+import mg  from "mongoose";
 
 let connection = () => {
     try {
@@ -8,4 +8,4 @@ let connection = () => {
         console.log(err)
     }
 }
-module.exports = connection
+export default connection;

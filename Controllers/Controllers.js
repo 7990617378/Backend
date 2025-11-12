@@ -1,10 +1,11 @@
-let express = require('express')
+import express from "express";
+import User from "../Schema/Schema.js";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import cp from "cookie-parser";
+import cors from "cors";
+
 let app = express()
-let User = require("../Schema/Schema")
-let bcrypt = require("bcrypt")
-let jwt = require("jsonwebtoken")
-let cp = require("cookie-parser")
-let cors = require("cors")
 app.use(cp())
 app.use(express.json());
 app.use(cors())
@@ -70,4 +71,4 @@ let Login = async (req, res) => {
     }
 }
 
-module.exports = { Register, Login }
+export  { Register, Login }

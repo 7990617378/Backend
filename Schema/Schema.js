@@ -1,4 +1,4 @@
-let mg = require("mongoose")
+import mg  from "mongoose";
 
 let Myschema = new mg.Schema({
     name: {
@@ -22,4 +22,4 @@ let Myschema = new mg.Schema({
 })
 let User = new mg.model("User", Myschema)
 
-module.exports = User
+export default User;
