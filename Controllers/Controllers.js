@@ -54,7 +54,8 @@ let Login = async (req, res) => {
             })
         }
         if (user && ismatch) {
-            let token = jwt.sign({ id: user._id }, "secretData")
+            let token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
+            // let token = jwt.sign({ id: user._id }, "secretData")
             res.cookie("token", token)
             res.send({
                 success: true,
